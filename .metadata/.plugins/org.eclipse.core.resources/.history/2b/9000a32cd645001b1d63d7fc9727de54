@@ -1,0 +1,56 @@
+
+public class Fruits {
+
+	private List<String> fruitsList;
+
+	public List<String> getFruitsList() {
+		return fruitsList;
+	}
+
+	public void setFruitsList(List<String> fruitsList) {
+		this.fruitsList = fruitsList;
+	}
+
+	public Fruits(List<String> fl) {
+		this.fruitsList = fl;
+	}
+	
+	public Fruits(Fruits fr) {
+		List<String> fl = new ArrayList<>();
+		for (String f : fr.getFruitsList()) {
+			fl.add(f);
+		}
+		this.fruitsList = fl;
+	}
+}
+
+
+package com.journaldev.constructor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CopyConstructorTest {
+
+	public static void main(String[] args) {
+		List<String> fl = new ArrayList<>();
+		fl.add("Mango");
+		fl.add("Orange");
+
+		Fruits fr = new Fruits(fl);
+
+		System.out.println(fr.getFruitsList());
+
+		Fruits frCopy = fr;
+		frCopy.getFruitsList().add("Apple");
+
+		System.out.println(fr.getFruitsList());
+
+		frCopy = new Fruits(fr);
+		frCopy.getFruitsList().add("Banana");
+		System.out.println(fr.getFruitsList());
+		System.out.println(frCopy.getFruitsList());
+
+	}
+
+}

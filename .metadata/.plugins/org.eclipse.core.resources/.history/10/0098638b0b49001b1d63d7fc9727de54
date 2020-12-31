@@ -1,0 +1,22 @@
+package package2;
+class Parent {
+	public void show() {
+		System.out.print("In base");
+	}
+}
+class Child extends Parent {
+	
+	public void show() {
+		System.out.print("In child");
+	}
+}
+public class overriding {
+	public static void main(String args[]) {
+		Child obj = new Child();
+		obj.show();
+		
+		Parent obj2 = new Parent();
+		obj2.show();
+	}
+	
+}

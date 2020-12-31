@@ -1,0 +1,5 @@
+WARNING: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.springcore.Student] for bean with name 'Student1' defined in class path resource [config.xml]; nested exception is java.lang.ClassNotFoundException: com.springcore.Student
+Exception in thread "main" org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.springcore.Student] for bean with name 'Student1' defined in class path resource [config.xml]; nested exception is java.lang.ClassNotFoundException: com.springcore.Student
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1476)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:682)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.jav

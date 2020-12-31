@@ -1,0 +1,10 @@
+package com.springcore.springcore;
+
+// This class is a bean which is holding the data. Bean is a normal java class.
+public class Student {
+	private String studentName;
+	private String studentAddress;
+	private int studentId;
+	
+
+}

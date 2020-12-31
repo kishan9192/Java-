@@ -1,0 +1,32 @@
+import java.util.*;
+public class loop {
+	public static void main(String[] args) {
+		String[] array = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+		for (String i: array) {
+			// Println prints in new line
+			// for same line use just print function
+			System.out.println(i);
+		}
+		
+		List<String>fruits = new ArrayList<>();
+		fruits.add("Peach");
+		fruits.add("Pomegranade");
+		fruits.add("Guava");
+		
+		// Add a new line 
+		System.out.println();
+		
+		for (String i : fruits) {
+			// Space separated output
+			System.out.print(i + "  ");
+		}
+		
+		int[][] arr= { {1,2,3}, {4,5,6}, {7,8,9} };
+		for (int i : arr.length) {
+			for (int j : arr[i].length) {
+				System.out.print(j + " ");
+			}
+			System.out.println();
+		}
+	}
+}

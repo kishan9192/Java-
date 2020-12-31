@@ -1,0 +1,11 @@
+package packageA;
+
+// Class TestA was a default class in the same package
+public class TestB {
+	public static void main(String[] args) {
+		new TestA().publicmethod();
+		//new TestA().privatemethod();
+		new TestA().defaultmethod();
+		new TestA().protectedmethod();
+	}
+}

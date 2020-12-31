@@ -1,0 +1,9 @@
+package package2;
+import TestB
+public class TestC {
+	public static void main(String[] args) {
+		new TestB.print();
+		new TestB.print2();
+		new TestB.print3();
+	}
+}

@@ -1,0 +1,30 @@
+package packageA;
+
+// This is the default class
+class TestA {
+	public void publicmethod() {
+		System.out.println("Inside Public Method");
+		privatemethod();
+	}
+	
+	protected void protectedmethod() {
+		System.out.println("Inside Protected Method");
+		privatemethod();
+	}
+	
+	void defaultmethod() {
+		System.out.println("Inside default Method");
+		privatemethod();
+	}
+	
+	private void privatemethod() {
+		System.out.println("Inside private method");
+	}
+	
+	public static void main(String[] args) {
+		new TestA().publicmethod();
+		new TestA().privatemethod();
+		new TestA().protectedmethod();
+		new TestA().defaultmethod();
+	}
+}

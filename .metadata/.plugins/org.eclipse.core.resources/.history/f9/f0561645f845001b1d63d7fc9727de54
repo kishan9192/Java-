@@ -1,0 +1,22 @@
+
+public class Solution {
+	
+
+	public static void main() {
+		Bird insect = new Bird();
+		insect.fly();
+		insect.walk();
+	}
+}
+
+class Animal {
+	public void walk() {
+		System.out.println("I can Walk");
+	}
+}
+
+class Bird extends Animal {
+	public void fly () {
+		System.out.println("I can fly");
+	}
+}

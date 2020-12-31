@@ -1,0 +1,27 @@
+// Different ways of calling constructor.
+
+
+public class Solution {
+	
+
+	public static void main(String[] args) {
+
+		//		Bird insect = new Bird();
+		//		insect.fly();
+		//		insect.walk();
+		new Bird().fly();
+		
+	}
+}
+
+class Animal {
+	public void walk() {
+		System.out.println("I can Walk");
+	}
+}
+
+class Bird extends Animal {
+	public void fly () {
+		System.out.println("I can fly");
+	}
+}

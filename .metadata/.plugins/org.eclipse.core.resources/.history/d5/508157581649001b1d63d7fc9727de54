@@ -1,0 +1,13 @@
+interface Interface{
+	void print();
+}
+public class interface_ {
+	class ClassA implements Interface {
+		void print() {
+			System.out.println("Interface method");
+		}
+	}
+	public static void main() {
+		
+	}
+}

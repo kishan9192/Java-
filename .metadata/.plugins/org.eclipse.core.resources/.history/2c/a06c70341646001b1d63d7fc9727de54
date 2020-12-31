@@ -1,0 +1,18 @@
+import java.util.*;
+public class loop {
+	public static void main(String[] args) {
+		String[] array = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
+		for (String i: array) {
+			System.out.print(i);
+		}
+		
+		List<String>fruits = new ArrayList<>();
+		fruits.add("Peach");
+		fruits.add("Pomegranade");
+		fruits.add("Guava");
+		System.out.println();
+		for (String i : fruits) {
+			System.out.print(i + "");
+		}
+	}
+}

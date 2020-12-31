@@ -1,0 +1,14 @@
+
+class Animal {
+	public static void walk() {
+		System.out.println("I can Walk");
+	}
+}
+
+class 
+
+
+
+public class Bird {
+
+}

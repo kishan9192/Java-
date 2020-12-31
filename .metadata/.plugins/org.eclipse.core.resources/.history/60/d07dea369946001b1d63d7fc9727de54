@@ -1,0 +1,24 @@
+package package2;
+
+public class Car {
+	public String name;
+	public String color;
+	
+	public void setcolor(String color) {
+		this.color = color;
+	}
+	
+	public void setcolor(String name) {
+		this.name = name;
+	}
+	
+	public void getcolor() {
+		System.out.println(this.color);
+	}
+	
+	public void getname() {
+		System.out.println(this.name);
+	}
+	
+	
+}

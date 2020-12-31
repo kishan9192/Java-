@@ -1,0 +1,21 @@
+
+public class access_modifiers {
+	
+	public static void publicmethod() {
+		System.out.println("Public Method");
+	}
+	
+	private static void privatemethod() {
+		System.out.println("Private Method");
+	}
+	
+	void defaultmethod() {
+		System.out.println("Default Method");
+	}
+	
+	protected void protectedmethod() {
+		System.out.println("Protected Method");
+	}
+}
+
+

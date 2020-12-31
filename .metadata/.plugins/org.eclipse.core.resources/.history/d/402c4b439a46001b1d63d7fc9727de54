@@ -1,0 +1,27 @@
+package package2;
+import packageA.Engine;
+public class Car {
+	public String name;
+	public String color;
+	
+	private Engine engine;
+	public void setcolor(String color) {
+		this.color = color;
+	}
+	
+	public void setname(String name) {
+		this.name = name;
+	}
+	
+	public void getcolor() {
+		System.out.println(this.color);
+	}
+	
+	public void getname() {
+		System.out.println(this.name);
+	}
+	
+	public static void main(String args[]) {
+		
+	}
+}

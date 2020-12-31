@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class deepcopy {
+
+	private List<String> fruitsList;
+
+	public List<String> getFruitsList() {
+		return fruitsList;
+	}
+
+	public void setFruitsList(List<String> fruitsList) {
+		this.fruitsList = fruitsList;
+	}
+
+	public deepcopy(List<String> fl) {
+		this.fruitsList = fl;
+	}
+	
+	public deepcopy(deepcopy fr) {
+		List<String> fl = new ArrayList<>();
+		for (String f : fr.getFruitsList()) {
+			fl.add(f);
+		}
+		this.fruitsList = fl;
+	}
+}
+
+//Notice that Fruits(Fruits fr) is performing a 
+//deep copy to return the copy of the object. 
+//Let’s look at a test program to understand 
+//why it’s better to have copy constructor to copy an object.
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public static void main() {
+	
+		List<String> fl = new ArrayList<>();
+		fl.add("Mango");
+		fl.add("Orange");
+
+		deepcopy fr = new deepcopy(fl);
+
+		System.out.println(fr.getFruitsList());
+
+		deepcopy frCopy = fr;
+		frCopy.getFruitsList().add("Apple");
+
+		System.out.println(fr.getFruitsList());
+
+		frCopy = new deepcopy(fr);
+		frCopy.getFruitsList().add("Banana");
+		System.out.println(fr.getFruitsList());
+		System.out.println(frCopy.getFruitsList());
+
+	}

@@ -1,0 +1,21 @@
+
+class Animal {
+	public static void walk() {
+		System.out.println("I can Walk");
+	}
+}
+
+class Bird extends Animal {
+	public static void fly () {
+		System.out.println("I can fly");
+	}
+}
+
+
+public class Solution {
+	public static void main() {
+		Bird insect = new Bird();
+		insect.fly();
+		insect.walk();
+	}
+}
