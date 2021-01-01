@@ -1,0 +1,16 @@
+package ref;
+
+public class A {
+	// Since class A is dependent on class B's object
+	// Therefore in config file we need to specify configurations/ set values
+	// for class B before setting A's.
+	
+	private int x;
+	private B ob;
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
