@@ -1,0 +1,13 @@
+package beanlifecycle;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class beanclass {
+	Test obj;
+	
+	public static void main(String[] args) {
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("");
+		
+	}
+}
