@@ -1,0 +1,25 @@
+package constructor_injection;
+
+
+public class Test {
+	private int marks;
+	Student stud;
+	
+	public Test(int marks, Student stud) {
+		this.marks = marks;
+		this.stud = stud;
+	}
+
+	@Override
+	public String toString() {
+		return (""+this.stud.getID() + " : " + this.stud.getname() + " : " + this.stud.getcourses() + " : " + this.marks);
+	}
+	
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("");
+		
+	}
+	
+	
+	
+}

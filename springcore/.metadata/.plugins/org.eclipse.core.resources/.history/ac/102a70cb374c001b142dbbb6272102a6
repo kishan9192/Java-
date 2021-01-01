@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">    
+    
+   <!--  this is our beans -->    
+    <bean class = "com.springcore.springcore.Student" name = "Student">
+    	<!-- Since we are using setter injection we need to specify property and it's value -->
+    	
+    	<property name="studentId">
+    		<value>3195</value>
+    	</property>
+    	
+    	<!--  Other way to do this is  -->
+    	<property name = "studentName" value = "Kishan MIshra"/>
+    	
+    	<property name = "studentAddress">
+    		<value>Delhi</value>
+    	</property>
+    </bean>
+    
+    
+    <!--  Creating a bean and setting the value using P schema -->
+    <!--  For that first we need to declare p schema xmlns:p="http://www.springframework.org/schema/p"  -->
+    
+    <bean class = "com.springcore.springcore.Student" name = "Student2" p:studentName = "John Doe" p:studentId = "3196" p:studentAddress = "Noida" />
+
+</beans>
