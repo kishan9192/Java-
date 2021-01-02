@@ -1,7 +1,6 @@
 package autowire;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,7 +14,7 @@ public class Student {
 	
 	@Autowired
 	@Qualifier("address1")
-	private Address address;
+	private Address address
 	
 	@Autowired
 	@Qualifier("address2")

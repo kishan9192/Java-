@@ -11,7 +11,7 @@
     <context:annotation-config/>
     
     <bean class = "autowire.Address" name = "address1" p:street = "Sector 62" p:city = "Noida"></bean>
-    <bean class = "autowire.Address" name = "address2" p:street = "Kohat" p:city = "Delhi"></bean> 
+     
     <bean class = "autowire.Student" name = "stud" p:name = "KK Mishra" p:id = "00"></bean>
     
     
