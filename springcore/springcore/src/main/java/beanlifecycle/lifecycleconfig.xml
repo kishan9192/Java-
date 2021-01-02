@@ -15,4 +15,10 @@
    		</property>
    </bean> 
    
+   
+   <!--  Interface lifecycle bean for initalization and destroy methods. No need to 
+   mention the methods in this XML -->
+   
+   <bean class = "beanlifecycle.beanclass" name = "interfacelifecycle"></bean>
+   
 </beans>

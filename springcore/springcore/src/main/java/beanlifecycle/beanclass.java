@@ -15,12 +15,19 @@ public class beanclass {
 	}
 
 	public static void main(String[] args) {
-		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beanlifecycle/lifecycleconfig.xml");
-		beanclass bj = (beanclass) context.getBean("tref");
-		System.out.println("X = "+ bj.obj.getX());
-		System.out.println("Y = "+ bj.obj.getY());
+//		XML config init and destroy		
+//		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beanlifecycle/lifecycleconfig.xml");
+//		beanclass bj = (beanclass) context.getBean("tref");
+//		System.out.println("X = "+ bj.obj.getX());
+//		System.out.println("Y = "+ bj.obj.getY());
 		
-		context.registerShutdownHook();
 		
+		
+	//	 Interface lifecycle 
+		AbstractApplicationContext context2 = new ClassPathXmlApplicationContext("beanlifecycle/lifecycleconfig.xml");
+		beanclass object = (beanclass) context2.getBean("interfacelifecycle");
+		
+		System.out.println(object);
+		context2.registerShutdownHook();
 	}
 }

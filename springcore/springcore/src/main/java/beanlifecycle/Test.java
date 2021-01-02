@@ -1,6 +1,9 @@
 package beanlifecycle;
 
-public class Test {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Test implements InitializingBean, DisposableBean {
 	int x,y;
 
 	public int getX() {
@@ -40,7 +43,17 @@ public class Test {
 	public void init() {
 		System.out.println("Inside init method");
 	}
-	public void destroy() {
-		System.out.println("Inside destroy method");
+//	public void destroy() {
+//		System.out.println("Inside destroy method");
+//	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Interface init method: Interface name = Initializing bean");
+		
+	}
+
+	public void destroy() throws Exception {
+		System.out.println("Interface lifecycle destroy method");
+		
 	}
 }

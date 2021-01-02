@@ -1,0 +1,22 @@
+package beanlifecycle;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Annotationbean {
+	Annotationtest testobj;
+	
+	public Annotationtest getTestobj() {
+		return testobj;
+	}
+
+	public void setTestobj(Annotationtest testobj) {
+		this.testobj = testobj;
+	}
+
+	public static void main() {
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beanlifecycle/annotationconfig.xml");
+		Annotationbean obj = (Annotationbean) context.getBean("bean1");
+		System.out.println(obj.getTestobj().getPrice());
+	}
+}
