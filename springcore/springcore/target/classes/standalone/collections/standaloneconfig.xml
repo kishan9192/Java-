@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">    
+    
+    
+    <!-- We need to include util name space for standalone collections -->
+    <!-- We need to specify full path for linked list and map "java.util.linkedlist and java.util.Treemap-->
+    <util:list list-class = "java.util.LinkedList"  id = "friendslist">
+    	<value>Kishan</value>
+    	<value>Kumar</value>
+    	<value>Mishra</value>
+    	<value>Kartik</value>
+    	<value>Mishra</value>
+    </util:list>
+  
+  	<util:map map-class ="java.util.TreeMap" id = "feestructure">
+  		<entry key = "python" value = "2000"></entry>
+  		<entry key = "C/C++" value = "8000"></entry>
+  		<entry key = "Java" value = "5000"></entry>
+  		<entry key = "DSA" value = "6000"></entry>
+  		
+  	</util:map>  
+    <bean class = "standalone.collections.Student" name = "stud1">
+    	<property name = "friends" ref = "friendslist"></property>
+    	<property name = "course" ref = "feestructure"></property>
+    </bean>
+</beans>
