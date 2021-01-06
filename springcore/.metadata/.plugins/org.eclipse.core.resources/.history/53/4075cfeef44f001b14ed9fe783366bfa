@@ -1,0 +1,32 @@
+package Noxml;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Test {
+	private int marks;
+
+	public int getMarks() {
+		return marks;
+	}
+
+	public void setMarks(int marks) {
+		this.marks = marks;
+	}
+
+	public Test(int marks) {
+		super();
+		this.marks = marks;
+	}
+
+	public Test() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Test [marks=" + marks + "]";
+	}
+	
+}

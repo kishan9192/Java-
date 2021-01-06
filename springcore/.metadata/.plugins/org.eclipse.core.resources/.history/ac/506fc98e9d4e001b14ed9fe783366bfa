@@ -1,0 +1,14 @@
+package AnnotationbeanSpEL;
+import java.util.List;
+
+public class StaticSpEL {
+	private int id;
+	private String name;
+	private List<String> course;
+	
+	
+	// these are used for calling the static method/variables
+	private double e;
+	
+	private double pi;
+}

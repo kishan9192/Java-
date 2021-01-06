@@ -1,0 +1,86 @@
+package Noxml;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+
+public class Student {
+	private String name;
+	private int id;
+	private List<String>courses;
+	
+	private Test t;
+
+	public String getName() {
+		return name;
+	}
+	
+	
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public Test getT() {
+		return t;
+	}
+
+	public void setT(Test t) {
+		this.t = t;
+	}
+
+	public Student(String name, int id, List<String>courses, Test t) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.t = t;
+		this.courses = courses;
+	}
+
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	
+	
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", id=" + id + ", courses=" + courses + ", t=" + t + "]";
+	}
+
+
+
+	public List<String> getCourses() {
+		return courses;
+	}
+
+
+
+	public void setCourses(List<String> courses) {
+		this.courses = courses;
+	}
+
+
+
+	public static void main(String[] args ) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+		Student obj = (Student) context.getBean("getStudent", Student.class);
+		System.out.println(obj);
+		System.out.println(obj.courses.getClass().getName());
+	}
+	
+}

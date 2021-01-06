@@ -1,0 +1,40 @@
+package AnnotationbeanSpEL;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
+
+// use component annotation above the class whose object is to be made.
+// object's name will be obj. Made at runtime.
+@Component ("obj")
+
+public class StaticSpEL {
+	
+	@Value("3195")
+	private int id;
+	
+	@Value("Kishan Kumar Mishra")
+	private String name;
+
+	@Value("#{courses}")
+	private List<String> course;
+	
+	
+	// these are used for calling the static method/variables
+	// e should return 5, coz it'll be storing the sqrt of 25
+//	@Value("#{T(java.lang.Math).sqrt(25)}")
+//	private double e;
+//	
+//	@Value("#{T(java.lang.Math)PI}")
+//	private double pi;
+	
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("AnnotationbeanSpEL/Static_config.xml");
+		StaticSpEL object = (StaticSpEL) context.getBean("obj", StaticSpEL.class);
+		System.out.print(" " + object.id + " " + object.name + " " +  " " + object.course);
+		
+	}
+}
